@@ -1,0 +1,3 @@
+python: can't open file '/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/evalaute.py': [Errno 2] No such file or directory
+Hostname was: bmicgpu04
+Reached end of job file.

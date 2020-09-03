@@ -1,0 +1,13 @@
+2020-08-28 18:19:41,857 Logging directory: /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1
+2020-08-28 18:19:41,876 ============================================================
+2020-08-28 18:19:41,877 EXPERIMENT NAME: unet3d_da_0.0_r1
+2020-08-28 18:19:41,877 ============================================================
+2020-08-28 18:19:41,877 Loading training data from: /usr/bmicnas01/data-biwi-01/nkarani/students/nicolas/data/freiburg
+2020-08-28 18:19:41,883 Shape of training images: (640, 144, 112, 48, 4)
+2020-08-28 18:19:41,883 Shape of training labels: (640, 144, 112, 48)
+2020-08-28 18:19:41,883 ============================================================
+2020-08-28 18:19:41,883 Loading validation data from: /usr/bmicnas01/data-biwi-01/nkarani/students/nicolas/data/freiburg
+2020-08-28 18:19:41,915 Shape of validation images: (160, 144, 112, 48, 4)
+2020-08-28 18:19:41,915 Shape of validation labels: (160, 144, 112, 48)
+2020-08-28 18:19:41,915 ============================================================
+slurmstepd: error: *** JOB 22361 ON biwirender17 CANCELLED AT 2020-08-28T18:26:49 ***

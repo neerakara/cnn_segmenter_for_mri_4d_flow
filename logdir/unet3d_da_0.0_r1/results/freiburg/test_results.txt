@@ -1,0 +1,17 @@
+================================== 
+Test results 
+subject number1 :: dice (mean, std over all FG labels): 0.891, 0.0, hausdorff distance (mean, std over all FG labels): 2.236, 0.0
+subject number2 :: dice (mean, std over all FG labels): 0.777, 0.0, hausdorff distance (mean, std over all FG labels): 3.0, 0.0
+subject number3 :: dice (mean, std over all FG labels): 0.79, 0.0, hausdorff distance (mean, std over all FG labels): 3.0, 0.0
+subject number4 :: dice (mean, std over all FG labels): 0.797, 0.0, hausdorff distance (mean, std over all FG labels): 2.449, 0.0
+================================== 
+Label: dice mean, std. deviation over all subjects
+0: 0.994, 0.001
+1: 0.814, 0.045
+================================== 
+Label: hausdorff distance mean, std. deviation over all subjects
+1: 2.671, 0.337
+================================== 
+DICE Mean, std. deviation over foreground labels over all subjects: 0.814, 0.045
+HSD Mean, std. deviation over labels over all subjects: 2.671, 0.337
+================================== 

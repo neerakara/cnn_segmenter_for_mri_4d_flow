@@ -1,0 +1,23 @@
+2020-09-03 15:30:30,594 ============================================================
+2020-09-03 15:30:30,594 Loading test data from: /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/data/eth_ibt/flownet/hannes/recon_R6_volN0_vn.mat
+Traceback (most recent call last):
+  File "/usr/bmicnas01/data-biwi-01/nkarani/softwares/anaconda/installation_dir/envs/tf_v1_12/lib/python3.6/site-packages/scipy/io/matlab/mio.py", line 33, in _open_file
+    return open(file_like, 'rb'), True
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/data/eth_ibt/flownet/hannes/recon_R6_volN0_vn.mat'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/evaluate.py", line 65, in <module>
+    images = data_flownet.read_image_mat(test_data_path)
+  File "/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/data_flownet.py", line 51, in read_image_mat
+    data = scipy.io.loadmat(filepath)
+  File "/usr/bmicnas01/data-biwi-01/nkarani/softwares/anaconda/installation_dir/envs/tf_v1_12/lib/python3.6/site-packages/scipy/io/matlab/mio.py", line 141, in loadmat
+    MR, file_opened = mat_reader_factory(file_name, appendmat, **kwargs)
+  File "/usr/bmicnas01/data-biwi-01/nkarani/softwares/anaconda/installation_dir/envs/tf_v1_12/lib/python3.6/site-packages/scipy/io/matlab/mio.py", line 64, in mat_reader_factory
+    byte_stream, file_opened = _open_file(file_name, appendmat)
+  File "/usr/bmicnas01/data-biwi-01/nkarani/softwares/anaconda/installation_dir/envs/tf_v1_12/lib/python3.6/site-packages/scipy/io/matlab/mio.py", line 39, in _open_file
+    return open(file_like, 'rb'), True
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/data/eth_ibt/flownet/hannes/recon_R6_volN0_vn.mat'
+Hostname was: biwirender04
+Reached end of job file.

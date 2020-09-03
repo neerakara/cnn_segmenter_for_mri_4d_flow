@@ -1,0 +1,10 @@
+2020-08-31 19:57:27,459 ============================================================
+2020-08-31 19:57:27,460 Loading test data from: /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/data/eth_ibt/New/flow_CStest_Volunteer_R4.h5
+Traceback (most recent call last):
+  File "/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/evaluate.py", line 59, in <module>
+    images = data_flownet.read_image(test_data_path)
+  File "/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/data_flownet.py", line 14, in read_image
+    data_flownet = h5py.File(dataset_filepath, 'r')
+NameError: name 'dataset_filepath' is not defined
+Hostname was: biwirender12
+Reached end of job file.
