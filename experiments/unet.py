@@ -11,15 +11,15 @@ import tensorflow as tf
 # ======================================================================
 model_handle = model_zoo.segmentation_cnn
 run_number = 1
-da_ratio = 0.0
-experiment_name = 'unet3d_da_' + str(da_ratio) + '_r' + str(run_number)
+da_ratio = 0.25
+nchannels = 1 # [intensity, vx, vy, vz]
+experiment_name = 'unet3d_da_' + str(da_ratio) + 'nchannels' + str(nchannels) + '_r' + str(run_number)
 
 # ======================================================================
 # data settings
 # ======================================================================
 data_mode = '3D'
 image_size = [144, 112, 48] # [x, y, time]
-nchannels = 4 # [intensity, vx, vy, vz]
 nlabels = 2 # [background, foreground]
 
 # ======================================================================

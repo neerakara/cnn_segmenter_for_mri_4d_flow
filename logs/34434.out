@@ -1,0 +1,81 @@
+2020-09-03 17:15:42,061 Logging directory: /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0nchannels1_r1
+2020-09-03 17:15:42,070 ============================================================
+2020-09-03 17:15:42,070 EXPERIMENT NAME: unet3d_da_0.0nchannels1_r1
+2020-09-03 17:15:42,070 ============================================================
+2020-09-03 17:15:42,070 Loading training data from: /usr/bmicnas01/data-biwi-01/nkarani/students/nicolas/data/freiburg
+2020-09-03 17:15:42,079 Shape of training images: (640, 144, 112, 48, 4)
+2020-09-03 17:15:42,079 Shape of training labels: (640, 144, 112, 48)
+2020-09-03 17:15:42,079 ============================================================
+2020-09-03 17:15:42,079 Loading validation data from: /usr/bmicnas01/data-biwi-01/nkarani/students/nicolas/data/freiburg
+2020-09-03 17:15:45,572 Shape of validation images: (160, 144, 112, 48)
+2020-09-03 17:15:45,572 Shape of validation labels: (160, 144, 112, 48)
+2020-09-03 17:15:45,573 ============================================================
+2020-09-03 17:15:45,573 ============================================================
+2020-09-03 17:15:45,573 Only the proton density images (channel 0) will be used for the segmentation...
+2020-09-03 17:15:45,573 ============================================================
+2020-09-03 17:15:45,587 Creating placeholders...
+2020-09-03 17:15:46,856 =======================================================
+2020-09-03 17:15:46,856 Details of the segmentation CNN architecture
+2020-09-03 17:15:46,856 =======================================================
+2020-09-03 17:15:46,856 Shape of input: (8, 144, 112, 48, 1)
+2020-09-03 17:15:46,856 Shape after 1st max pooling layer: (8, 72, 56, 24, 8)
+2020-09-03 17:15:46,856 Shape after 2nd max pooling layer: (8, 36, 28, 12, 16)
+2020-09-03 17:15:46,856 Shape after 3rd max pooling layer: (8, 18, 14, 6, 32)
+2020-09-03 17:15:46,856 Shape after 4th max pooling layer: (8, 9, 7, 3, 64)
+2020-09-03 17:15:46,856 =======================================================
+2020-09-03 17:15:46,856 Before each maxpool, there are 2 conv blocks.
+2020-09-03 17:15:46,857 Each conv block consists of conv3d (k=3), followed by BN, followed by relu.
+2020-09-03 17:15:46,857 =======================================================
+2020-09-03 17:15:46,857 Shape of the bottleneck layer: (8, 9, 7, 3, 128)
+2020-09-03 17:15:46,857 =======================================================
+2020-09-03 17:15:46,857 Shape after 1st upsampling block: (8, 18, 14, 6, 64)
+2020-09-03 17:15:46,857 Shape after 2nd upsampling block: (8, 36, 28, 12, 32)
+2020-09-03 17:15:46,857 Shape after 3rd upsampling block: (8, 72, 56, 24, 16)
+2020-09-03 17:15:46,857 Shape after 4rd upsampling block: (8, 144, 112, 48, 8)
+2020-09-03 17:15:46,857 =======================================================
+2020-09-03 17:15:46,857 Each upsampling block consists of bilinear upsampling, followed by skip connection, followed by 2 conv blocks.
+2020-09-03 17:15:46,857 =======================================================
+2020-09-03 17:15:46,857 Shape of output (before softmax): (8, 144, 112, 48, 2)
+2020-09-03 17:15:46,857 =======================================================
+2020-09-03 17:15:50,284 Adding the op to get a list of initialized variables...
+2020-09-03 17:15:51.016928: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: GeForce GTX TITAN X major: 5 minor: 2 memoryClockRate(GHz): 1.076
+pciBusID: 0000:05:00.0
+totalMemory: 11.93GiB freeMemory: 11.82GiB
+2020-09-03 17:15:51.016992: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2020-09-03 17:15:51.973693: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-09-03 17:15:51.973773: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2020-09-03 17:15:51.973784: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2020-09-03 17:15:51.974022: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11436 MB memory) -> physical GPU (device: 0, name: GeForce GTX TITAN X, pci bus id: 0000:05:00.0, compute capability: 5.2)
+2020-09-03 17:15:53,268 Freezing the graph now!
+2020-09-03 17:15:53,268 ============================================================
+2020-09-03 17:15:53,268 initializing all variables...
+2020-09-03 17:15:53,897 ============================================================
+2020-09-03 17:15:53,897 This is the list of uninitialized variables:
+2020-09-03 17:15:54,100 ============================================================
+2020-09-03 17:15:54,100 Step 0
+2020-09-03 17:15:55.195649: E tensorflow/core/grappler/optimizers/dependency_optimizer.cc:666] Iteration = 0, topological sort failed with message: The graph couldn't be sorted in topological order.
+2020-09-03 17:15:55.240550: E tensorflow/core/grappler/optimizers/dependency_optimizer.cc:666] Iteration = 1, topological sort failed with message: The graph couldn't be sorted in topological order.
+2020-09-03 17:15:55.412628: E tensorflow/core/grappler/optimizers/dependency_optimizer.cc:666] Iteration = 0, topological sort failed with message: The graph couldn't be sorted in topological order.
+2020-09-03 17:15:55.428158: E tensorflow/core/grappler/optimizers/dependency_optimizer.cc:666] Iteration = 1, topological sort failed with message: The graph couldn't be sorted in topological order.
+2020-09-03 17:16:04,301 Training Data Eval:
+2020-09-03 17:17:06,400   Average loss: 0.6429, average dice: 0.3571
+2020-09-03 17:17:07,211 Validation Data Eval:
+Already preprocessed this configuration. Loading now...
+Already preprocessed this configuration. Loading now...
+Traceback (most recent call last):
+  File "/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/train.py", line 464, in <module>
+    main()
+  File "/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/train.py", line 458, in main
+    run_training(continue_run)
+  File "/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/train.py", line 322, in run_training
+    exp_config.batch_size)
+  File "/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/train.py", line 378, in do_eval
+    loss_batch, dice_batch = sess.run(eval_loss, feed_dict=feed_dict)
+  File "/usr/bmicnas01/data-biwi-01/nkarani/softwares/anaconda/installation_dir/envs/tf_v1_12/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 929, in run
+    run_metadata_ptr)
+  File "/usr/bmicnas01/data-biwi-01/nkarani/softwares/anaconda/installation_dir/envs/tf_v1_12/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1128, in _run
+    str(subfeed_t.get_shape())))
+ValueError: Cannot feed value of shape (8, 144, 112, 1) for Tensor 'images:0', which has shape '(8, 144, 112, 48, 1)'
+Hostname was: biwirender06
+Reached end of job file.

@@ -233,15 +233,46 @@ def compute_surface_distance(y1,
         
     return np.array(hausdorff_distance_list)
 
-# ==================================================================
-# data augmentation function
-# ==================================================================
-def augment_data(images, labels):
+# ===========================      
+# data augmentation: gamma contrast, brightness (one number added to the entire slice), additive noise (random gaussian noise image added to the slice)
+# ===========================        
+def augment_data(images, # (batchsize, nx, ny, nt, 1)
+                 labels, # (batchsize, nx, ny, nt)
+                 data_aug_ratio,
+                 gamma_min = 0.5,
+                 gamma_max = 2.0,
+                 brightness_min = 0.0,
+                 brightness_max = 0.1,
+                 noise_min = 0.0,
+                 noise_max = 0.1):
+        
+    images_ = np.copy(images)
+    labels_ = np.copy(labels)
     
-    x_ = np.copy(images)
-    y_ = np.copy(labels)
-    
-    return x_, y_
+    for i in range(images.shape[0]):
+                        
+        # ========
+        # contrast # gamma contrast augmentation
+        # ========
+        if np.random.rand() < data_aug_ratio:
+            c = np.round(np.random.uniform(gamma_min, gamma_max), 2)
+            images_[i,...] = images_[i,...]**c
+
+        # ========
+        # brightness
+        # ========
+        if np.random.rand() < data_aug_ratio:
+            c = np.round(np.random.uniform(brightness_min, brightness_max), 2)
+            images_[i,...] = images_[i,...] + c
+            
+        # ========
+        # noise
+        # ========
+        if np.random.rand() < data_aug_ratio:
+            n = np.random.normal(noise_min, noise_max, size = images_[i,...].shape)
+            images_[i,...] = images_[i,...] + n
+            
+    return images_, labels_
 
 # ==================================================================
 # crop or pad functions to change image size without changing resolution

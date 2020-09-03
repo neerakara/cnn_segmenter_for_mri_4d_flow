@@ -11,8 +11,9 @@
 #SBATCH  --mem=40G
 
 # activate virtual environment
-source /usr/bmicnas01/data-biwi-01/nkarani/softwares/anaconda/installation_dir/etc/profile.d/conda.sh
-conda activate tf_v1_12
+# source /usr/bmicnas01/data-biwi-01/nkarani/softwares/anaconda/installation_dir/etc/profile.d/conda.sh
+# conda activate tf_v1_12
+source /usr/bmicnas01/data-biwi-01/nkarani/softwares/anaconda/installation_dir/bin/activate tf_v1_12
 
 ## EXECUTION OF PYTHON CODE:
 python /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/train.py

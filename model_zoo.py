@@ -3,6 +3,8 @@ import logging
 from experiments import unet as exp_config
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
 
+# ========================================================
+# ========================================================
 def segmentation_cnn(input_images, training): 
     
     with tf.name_scope('segmenter'):

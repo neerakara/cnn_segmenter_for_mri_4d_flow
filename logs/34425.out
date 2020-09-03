@@ -1,0 +1,70 @@
+2020-09-03 16:57:00,926 Logging directory: /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0nchannels1_r1
+2020-09-03 16:57:00,936 ============================================================
+2020-09-03 16:57:00,936 EXPERIMENT NAME: unet3d_da_0.0nchannels1_r1
+2020-09-03 16:57:00,936 ============================================================
+2020-09-03 16:57:00,936 Loading training data from: /usr/bmicnas01/data-biwi-01/nkarani/students/nicolas/data/freiburg
+2020-09-03 16:58:09,859 Shape of training images: (640, 144, 112, 48)
+2020-09-03 16:58:09,982 Shape of training labels: (640, 144, 112, 48)
+2020-09-03 16:58:09,982 ============================================================
+2020-09-03 16:58:09,982 Loading validation data from: /usr/bmicnas01/data-biwi-01/nkarani/students/nicolas/data/freiburg
+2020-09-03 16:58:26,957 Shape of validation images: (160, 144, 112)
+2020-09-03 16:58:27,001 Shape of validation labels: (160, 144, 112, 48)
+2020-09-03 16:58:27,001 ============================================================
+2020-09-03 16:58:27,025 Creating placeholders...
+2020-09-03 16:58:28,612 =======================================================
+2020-09-03 16:58:28,612 Details of the segmentation CNN architecture
+2020-09-03 16:58:28,612 =======================================================
+2020-09-03 16:58:28,612 Shape of input: (8, 144, 112, 48, 1)
+2020-09-03 16:58:28,612 Shape after 1st max pooling layer: (8, 72, 56, 24, 8)
+2020-09-03 16:58:28,612 Shape after 2nd max pooling layer: (8, 36, 28, 12, 16)
+2020-09-03 16:58:28,612 Shape after 3rd max pooling layer: (8, 18, 14, 6, 32)
+2020-09-03 16:58:28,612 Shape after 4th max pooling layer: (8, 9, 7, 3, 64)
+2020-09-03 16:58:28,612 =======================================================
+2020-09-03 16:58:28,612 Before each maxpool, there are 2 conv blocks.
+2020-09-03 16:58:28,612 Each conv block consists of conv3d (k=3), followed by BN, followed by relu.
+2020-09-03 16:58:28,612 =======================================================
+2020-09-03 16:58:28,612 Shape of the bottleneck layer: (8, 9, 7, 3, 128)
+2020-09-03 16:58:28,612 =======================================================
+2020-09-03 16:58:28,612 Shape after 1st upsampling block: (8, 18, 14, 6, 64)
+2020-09-03 16:58:28,612 Shape after 2nd upsampling block: (8, 36, 28, 12, 32)
+2020-09-03 16:58:28,612 Shape after 3rd upsampling block: (8, 72, 56, 24, 16)
+2020-09-03 16:58:28,612 Shape after 4rd upsampling block: (8, 144, 112, 48, 8)
+2020-09-03 16:58:28,612 =======================================================
+2020-09-03 16:58:28,612 Each upsampling block consists of bilinear upsampling, followed by skip connection, followed by 2 conv blocks.
+2020-09-03 16:58:28,612 =======================================================
+2020-09-03 16:58:28,613 Shape of output (before softmax): (8, 144, 112, 48, 2)
+2020-09-03 16:58:28,613 =======================================================
+2020-09-03 16:58:32,493 Adding the op to get a list of initialized variables...
+2020-09-03 16:58:33.124875: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-09-03 16:58:33.317650: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: GeForce RTX 2080 Ti major: 7 minor: 5 memoryClockRate(GHz): 1.545
+pciBusID: 0000:83:00.0
+totalMemory: 10.73GiB freeMemory: 10.57GiB
+2020-09-03 16:58:33.317690: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2020-09-03 16:58:39.076900: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-09-03 16:58:39.077482: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2020-09-03 16:58:39.077503: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2020-09-03 16:58:39.077769: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10203 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2080 Ti, pci bus id: 0000:83:00.0, compute capability: 7.5)
+2020-09-03 16:58:40,355 Freezing the graph now!
+2020-09-03 16:58:40,355 ============================================================
+2020-09-03 16:58:40,355 initializing all variables...
+2020-09-03 16:58:41,133 ============================================================
+2020-09-03 16:58:41,133 This is the list of uninitialized variables:
+2020-09-03 16:58:41,371 ============================================================
+2020-09-03 16:58:41,371 Step 0
+Already preprocessed this configuration. Loading now...
+Already preprocessed this configuration. Loading now...
+Traceback (most recent call last):
+  File "/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/train.py", line 459, in <module>
+    main()
+  File "/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/train.py", line 453, in main
+    run_training(continue_run)
+  File "/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/train.py", line 270, in run_training
+    _, loss_value = sess.run([train_op, loss], feed_dict=feed_dict)
+  File "/usr/bmicnas01/data-biwi-01/nkarani/softwares/anaconda/installation_dir/envs/tf_v1_12/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 929, in run
+    run_metadata_ptr)
+  File "/usr/bmicnas01/data-biwi-01/nkarani/softwares/anaconda/installation_dir/envs/tf_v1_12/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1128, in _run
+    str(subfeed_t.get_shape())))
+ValueError: Cannot feed value of shape (8, 144, 112, 48) for Tensor 'images:0', which has shape '(8, 144, 112, 48, 1)'
+Hostname was: biwirender12
+Reached end of job file.

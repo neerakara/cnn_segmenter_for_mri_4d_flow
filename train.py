@@ -68,6 +68,7 @@ def run_training(continue_run):
                                                     train_test='train')
     images_tr = data_tr['images_train']
     labels_tr = data_tr['labels_train']
+        
     logging.info('Shape of training images: %s' %str(images_tr.shape)) # expected: [img_size_z*num_images, img_size_x, vol_size_y, img_size_t, n_channels]
     logging.info('Shape of training labels: %s' %str(labels_tr.shape)) # expected: [img_size_z*num_images, img_size_x, vol_size_y, img_size_t]
 
@@ -78,10 +79,16 @@ def run_training(continue_run):
                                                     idx_end = 24,
                                                     train_test='validation')
     images_vl = data_vl['images_validation']
-    labels_vl = data_vl['labels_validation']
+    labels_vl = data_vl['labels_validation']        
+        
     logging.info('Shape of validation images: %s' %str(images_vl.shape))
     logging.info('Shape of validation labels: %s' %str(labels_vl.shape))
     logging.info('============================================================')
+    
+    if exp_config.nchannels is 1:
+        logging.info('============================================================')
+        logging.info('Only the proton density images (channel 0) will be used for the segmentation...')
+        logging.info('============================================================')
 
     # visualize some training images and their labels
     visualize_images = False
@@ -275,7 +282,6 @@ def run_training(continue_run):
                 # compute the loss on the entire training set
                 # ===========================
                 if step % exp_config.train_eval_frequency == 0:
-
                     logging.info('Training Data Eval:')
                     [train_loss, train_dice] = do_eval(sess,
                                                        eval_loss,
@@ -293,15 +299,13 @@ def run_training(continue_run):
                 # save a checkpoint periodically
                 # ===========================
                 if step % exp_config.save_frequency == 0:
-
                     checkpoint_file = os.path.join(log_dir, 'models/model.ckpt')
                     saver.save(sess, checkpoint_file, global_step=step)
 
                 # ===========================
                 # evaluate the model on the validation set
                 # ===========================
-                if step % exp_config.val_eval_frequency == 0:
-                    
+                if step % exp_config.val_eval_frequency == 0:                    
                     # ===========================
                     # Evaluate against the validation set
                     # ===========================
@@ -413,12 +417,20 @@ def iterate_minibatches(images,
 
         X = images[batch_indices, ...]
         y = labels[batch_indices, ...]
+        
+        # ===========================
+        # check if the velocity fields are to be used for the segmentation...
+        # ===========================
+        if exp_config.nchannels is 1:
+            X = X[..., 0:1]
     
         # ===========================
         # augment the batch            
         # ===========================
-        if exp_config.da_ratio > 0.0:
-            X, y = utils.augment_data(X, y)
+        if exp_config.da_ratio > 0.0 and exp_config.nchannels == 1:
+            X, y = utils.augment_data(X,
+                                      y,
+                                      data_aug_ratio = exp_config.da_ratio)
         
         yield X, y
 

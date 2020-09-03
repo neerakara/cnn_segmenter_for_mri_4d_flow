@@ -1,0 +1,2 @@
+model_checkpoint_path: "/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0nchannels1_r1/models/best_dice.ckpt-0"
+all_model_checkpoint_paths: "/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0nchannels1_r1/models/best_dice.ckpt-0"
