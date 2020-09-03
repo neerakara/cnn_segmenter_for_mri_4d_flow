@@ -444,3 +444,447 @@ INFO:tensorflow:Restoring parameters from /usr/bmicnas01/data-biwi-01/nkarani/pr
 2020-09-03 15:55:39,776 Restoring parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000
 2020-09-03 15:55:39,814 ========================================================
 2020-09-03 15:55:39,815 Predicting segmentation for test subject 1...
+2020-09-03 15:57:14,851 ============================================================
+2020-09-03 15:57:14,852 Loading test data from: /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/data/eth_ibt/flownet/hannes/recon_R10_volN4_vn.mat
+2020-09-03 15:57:19,559 Shape of test images: (32, 144, 112, 48, 4)
+2020-09-03 15:57:19,559 Shape of test labels: (32, 144, 112, 48)
+2020-09-03 15:57:19,559 ============================================================
+2020-09-03 15:57:20,274 =======================================================
+2020-09-03 15:57:20,274 Details of the segmentation CNN architecture
+2020-09-03 15:57:20,274 =======================================================
+2020-09-03 15:57:20,274 Shape of input: (8, 144, 112, 48, 4)
+2020-09-03 15:57:20,274 Shape after 1st max pooling layer: (8, 72, 56, 24, 8)
+2020-09-03 15:57:20,274 Shape after 2nd max pooling layer: (8, 36, 28, 12, 16)
+2020-09-03 15:57:20,274 Shape after 3rd max pooling layer: (8, 18, 14, 6, 32)
+2020-09-03 15:57:20,274 Shape after 4th max pooling layer: (8, 9, 7, 3, 64)
+2020-09-03 15:57:20,274 =======================================================
+2020-09-03 15:57:20,274 Before each maxpool, there are 2 conv blocks.
+2020-09-03 15:57:20,274 Each conv block consists of conv3d (k=3), followed by BN, followed by relu.
+2020-09-03 15:57:20,274 =======================================================
+2020-09-03 15:57:20,274 Shape of the bottleneck layer: (8, 9, 7, 3, 128)
+2020-09-03 15:57:20,274 =======================================================
+2020-09-03 15:57:20,274 Shape after 1st upsampling block: (8, 18, 14, 6, 64)
+2020-09-03 15:57:20,274 Shape after 2nd upsampling block: (8, 36, 28, 12, 32)
+2020-09-03 15:57:20,274 Shape after 3rd upsampling block: (8, 72, 56, 24, 16)
+2020-09-03 15:57:20,274 Shape after 4rd upsampling block: (8, 144, 112, 48, 8)
+2020-09-03 15:57:20,275 =======================================================
+2020-09-03 15:57:20,275 Each upsampling block consists of bilinear upsampling, followed by skip connection, followed by 2 conv blocks.
+2020-09-03 15:57:20,275 =======================================================
+2020-09-03 15:57:20,275 Shape of output (before softmax): (8, 144, 112, 48, 2)
+2020-09-03 15:57:20,275 =======================================================
+2020-09-03 15:57:20,367 Adding the op to initialize variables...
+2020-09-03 15:57:20.369398: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2020-09-03 15:57:20.369455: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-09-03 15:57:20.369464: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2020-09-03 15:57:20.369472: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2020-09-03 15:57:20.369634: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10754 MB memory) -> physical GPU (device: 0, name: Tesla K40c, pci bus id: 0000:04:00.0, compute capability: 3.5)
+2020-09-03 15:57:20,602 ========================================================
+2020-09-03 15:57:20,602 Restoring the trained parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000...
+INFO:tensorflow:Restoring parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000
+2020-09-03 15:57:20,603 Restoring parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000
+2020-09-03 15:57:20,644 ========================================================
+2020-09-03 15:57:20,644 Predicting segmentation for test subject 1...
+2020-09-03 15:58:56,299 ============================================================
+2020-09-03 15:58:56,299 Loading test data from: /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/data/eth_ibt/flownet/hannes/recon_R6_volN5_vn.mat
+2020-09-03 15:58:59,206 Shape of test images: (32, 144, 112, 48, 4)
+2020-09-03 15:58:59,206 Shape of test labels: (32, 144, 112, 48)
+2020-09-03 15:58:59,206 ============================================================
+2020-09-03 15:58:59,919 =======================================================
+2020-09-03 15:58:59,919 Details of the segmentation CNN architecture
+2020-09-03 15:58:59,919 =======================================================
+2020-09-03 15:58:59,919 Shape of input: (8, 144, 112, 48, 4)
+2020-09-03 15:58:59,919 Shape after 1st max pooling layer: (8, 72, 56, 24, 8)
+2020-09-03 15:58:59,919 Shape after 2nd max pooling layer: (8, 36, 28, 12, 16)
+2020-09-03 15:58:59,919 Shape after 3rd max pooling layer: (8, 18, 14, 6, 32)
+2020-09-03 15:58:59,919 Shape after 4th max pooling layer: (8, 9, 7, 3, 64)
+2020-09-03 15:58:59,919 =======================================================
+2020-09-03 15:58:59,919 Before each maxpool, there are 2 conv blocks.
+2020-09-03 15:58:59,919 Each conv block consists of conv3d (k=3), followed by BN, followed by relu.
+2020-09-03 15:58:59,919 =======================================================
+2020-09-03 15:58:59,919 Shape of the bottleneck layer: (8, 9, 7, 3, 128)
+2020-09-03 15:58:59,920 =======================================================
+2020-09-03 15:58:59,920 Shape after 1st upsampling block: (8, 18, 14, 6, 64)
+2020-09-03 15:58:59,920 Shape after 2nd upsampling block: (8, 36, 28, 12, 32)
+2020-09-03 15:58:59,920 Shape after 3rd upsampling block: (8, 72, 56, 24, 16)
+2020-09-03 15:58:59,920 Shape after 4rd upsampling block: (8, 144, 112, 48, 8)
+2020-09-03 15:58:59,920 =======================================================
+2020-09-03 15:58:59,920 Each upsampling block consists of bilinear upsampling, followed by skip connection, followed by 2 conv blocks.
+2020-09-03 15:58:59,920 =======================================================
+2020-09-03 15:58:59,920 Shape of output (before softmax): (8, 144, 112, 48, 2)
+2020-09-03 15:58:59,920 =======================================================
+2020-09-03 15:59:00,012 Adding the op to initialize variables...
+2020-09-03 15:59:00.014411: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2020-09-03 15:59:00.014467: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-09-03 15:59:00.014477: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2020-09-03 15:59:00.014485: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2020-09-03 15:59:00.014645: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10754 MB memory) -> physical GPU (device: 0, name: Tesla K40c, pci bus id: 0000:04:00.0, compute capability: 3.5)
+2020-09-03 15:59:00,246 ========================================================
+2020-09-03 15:59:00,246 Restoring the trained parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000...
+INFO:tensorflow:Restoring parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000
+2020-09-03 15:59:00,248 Restoring parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000
+2020-09-03 15:59:00,286 ========================================================
+2020-09-03 15:59:00,286 Predicting segmentation for test subject 1...
+2020-09-03 16:00:35,384 ============================================================
+2020-09-03 16:00:35,385 Loading test data from: /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/data/eth_ibt/flownet/hannes/recon_R8_volN5_vn.mat
+2020-09-03 16:00:39,215 Shape of test images: (32, 144, 112, 48, 4)
+2020-09-03 16:00:39,215 Shape of test labels: (32, 144, 112, 48)
+2020-09-03 16:00:39,215 ============================================================
+2020-09-03 16:00:39,929 =======================================================
+2020-09-03 16:00:39,929 Details of the segmentation CNN architecture
+2020-09-03 16:00:39,929 =======================================================
+2020-09-03 16:00:39,929 Shape of input: (8, 144, 112, 48, 4)
+2020-09-03 16:00:39,929 Shape after 1st max pooling layer: (8, 72, 56, 24, 8)
+2020-09-03 16:00:39,929 Shape after 2nd max pooling layer: (8, 36, 28, 12, 16)
+2020-09-03 16:00:39,929 Shape after 3rd max pooling layer: (8, 18, 14, 6, 32)
+2020-09-03 16:00:39,929 Shape after 4th max pooling layer: (8, 9, 7, 3, 64)
+2020-09-03 16:00:39,929 =======================================================
+2020-09-03 16:00:39,929 Before each maxpool, there are 2 conv blocks.
+2020-09-03 16:00:39,929 Each conv block consists of conv3d (k=3), followed by BN, followed by relu.
+2020-09-03 16:00:39,929 =======================================================
+2020-09-03 16:00:39,929 Shape of the bottleneck layer: (8, 9, 7, 3, 128)
+2020-09-03 16:00:39,930 =======================================================
+2020-09-03 16:00:39,930 Shape after 1st upsampling block: (8, 18, 14, 6, 64)
+2020-09-03 16:00:39,930 Shape after 2nd upsampling block: (8, 36, 28, 12, 32)
+2020-09-03 16:00:39,930 Shape after 3rd upsampling block: (8, 72, 56, 24, 16)
+2020-09-03 16:00:39,930 Shape after 4rd upsampling block: (8, 144, 112, 48, 8)
+2020-09-03 16:00:39,930 =======================================================
+2020-09-03 16:00:39,930 Each upsampling block consists of bilinear upsampling, followed by skip connection, followed by 2 conv blocks.
+2020-09-03 16:00:39,930 =======================================================
+2020-09-03 16:00:39,930 Shape of output (before softmax): (8, 144, 112, 48, 2)
+2020-09-03 16:00:39,930 =======================================================
+2020-09-03 16:00:40,022 Adding the op to initialize variables...
+2020-09-03 16:00:40.024615: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2020-09-03 16:00:40.024672: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-09-03 16:00:40.024681: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2020-09-03 16:00:40.024690: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2020-09-03 16:00:40.024851: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10754 MB memory) -> physical GPU (device: 0, name: Tesla K40c, pci bus id: 0000:04:00.0, compute capability: 3.5)
+2020-09-03 16:00:40,256 ========================================================
+2020-09-03 16:00:40,256 Restoring the trained parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000...
+INFO:tensorflow:Restoring parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000
+2020-09-03 16:00:40,258 Restoring parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000
+2020-09-03 16:00:40,297 ========================================================
+2020-09-03 16:00:40,297 Predicting segmentation for test subject 1...
+2020-09-03 16:02:15,471 ============================================================
+2020-09-03 16:02:15,472 Loading test data from: /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/data/eth_ibt/flownet/hannes/recon_R10_volN5_vn.mat
+2020-09-03 16:02:19,366 Shape of test images: (32, 144, 112, 48, 4)
+2020-09-03 16:02:19,366 Shape of test labels: (32, 144, 112, 48)
+2020-09-03 16:02:19,366 ============================================================
+2020-09-03 16:02:20,078 =======================================================
+2020-09-03 16:02:20,079 Details of the segmentation CNN architecture
+2020-09-03 16:02:20,079 =======================================================
+2020-09-03 16:02:20,079 Shape of input: (8, 144, 112, 48, 4)
+2020-09-03 16:02:20,079 Shape after 1st max pooling layer: (8, 72, 56, 24, 8)
+2020-09-03 16:02:20,079 Shape after 2nd max pooling layer: (8, 36, 28, 12, 16)
+2020-09-03 16:02:20,079 Shape after 3rd max pooling layer: (8, 18, 14, 6, 32)
+2020-09-03 16:02:20,079 Shape after 4th max pooling layer: (8, 9, 7, 3, 64)
+2020-09-03 16:02:20,079 =======================================================
+2020-09-03 16:02:20,079 Before each maxpool, there are 2 conv blocks.
+2020-09-03 16:02:20,079 Each conv block consists of conv3d (k=3), followed by BN, followed by relu.
+2020-09-03 16:02:20,079 =======================================================
+2020-09-03 16:02:20,079 Shape of the bottleneck layer: (8, 9, 7, 3, 128)
+2020-09-03 16:02:20,079 =======================================================
+2020-09-03 16:02:20,079 Shape after 1st upsampling block: (8, 18, 14, 6, 64)
+2020-09-03 16:02:20,079 Shape after 2nd upsampling block: (8, 36, 28, 12, 32)
+2020-09-03 16:02:20,079 Shape after 3rd upsampling block: (8, 72, 56, 24, 16)
+2020-09-03 16:02:20,079 Shape after 4rd upsampling block: (8, 144, 112, 48, 8)
+2020-09-03 16:02:20,079 =======================================================
+2020-09-03 16:02:20,079 Each upsampling block consists of bilinear upsampling, followed by skip connection, followed by 2 conv blocks.
+2020-09-03 16:02:20,079 =======================================================
+2020-09-03 16:02:20,079 Shape of output (before softmax): (8, 144, 112, 48, 2)
+2020-09-03 16:02:20,079 =======================================================
+2020-09-03 16:02:20,171 Adding the op to initialize variables...
+2020-09-03 16:02:20.173710: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2020-09-03 16:02:20.173768: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-09-03 16:02:20.173778: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2020-09-03 16:02:20.173786: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2020-09-03 16:02:20.173970: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10754 MB memory) -> physical GPU (device: 0, name: Tesla K40c, pci bus id: 0000:04:00.0, compute capability: 3.5)
+2020-09-03 16:02:20,407 ========================================================
+2020-09-03 16:02:20,408 Restoring the trained parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000...
+INFO:tensorflow:Restoring parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000
+2020-09-03 16:02:20,409 Restoring parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000
+2020-09-03 16:02:20,447 ========================================================
+2020-09-03 16:02:20,447 Predicting segmentation for test subject 1...
+2020-09-03 16:03:55,272 ============================================================
+2020-09-03 16:03:55,272 Loading test data from: /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/data/eth_ibt/flownet/hannes/recon_R6_volN6_vn.mat
+2020-09-03 16:03:58,846 Shape of test images: (32, 144, 112, 48, 4)
+2020-09-03 16:03:58,846 Shape of test labels: (32, 144, 112, 48)
+2020-09-03 16:03:58,846 ============================================================
+2020-09-03 16:03:59,559 =======================================================
+2020-09-03 16:03:59,559 Details of the segmentation CNN architecture
+2020-09-03 16:03:59,559 =======================================================
+2020-09-03 16:03:59,559 Shape of input: (8, 144, 112, 48, 4)
+2020-09-03 16:03:59,559 Shape after 1st max pooling layer: (8, 72, 56, 24, 8)
+2020-09-03 16:03:59,559 Shape after 2nd max pooling layer: (8, 36, 28, 12, 16)
+2020-09-03 16:03:59,559 Shape after 3rd max pooling layer: (8, 18, 14, 6, 32)
+2020-09-03 16:03:59,559 Shape after 4th max pooling layer: (8, 9, 7, 3, 64)
+2020-09-03 16:03:59,559 =======================================================
+2020-09-03 16:03:59,559 Before each maxpool, there are 2 conv blocks.
+2020-09-03 16:03:59,559 Each conv block consists of conv3d (k=3), followed by BN, followed by relu.
+2020-09-03 16:03:59,559 =======================================================
+2020-09-03 16:03:59,559 Shape of the bottleneck layer: (8, 9, 7, 3, 128)
+2020-09-03 16:03:59,559 =======================================================
+2020-09-03 16:03:59,559 Shape after 1st upsampling block: (8, 18, 14, 6, 64)
+2020-09-03 16:03:59,559 Shape after 2nd upsampling block: (8, 36, 28, 12, 32)
+2020-09-03 16:03:59,560 Shape after 3rd upsampling block: (8, 72, 56, 24, 16)
+2020-09-03 16:03:59,560 Shape after 4rd upsampling block: (8, 144, 112, 48, 8)
+2020-09-03 16:03:59,560 =======================================================
+2020-09-03 16:03:59,560 Each upsampling block consists of bilinear upsampling, followed by skip connection, followed by 2 conv blocks.
+2020-09-03 16:03:59,560 =======================================================
+2020-09-03 16:03:59,560 Shape of output (before softmax): (8, 144, 112, 48, 2)
+2020-09-03 16:03:59,560 =======================================================
+2020-09-03 16:03:59,652 Adding the op to initialize variables...
+2020-09-03 16:03:59.654121: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2020-09-03 16:03:59.654184: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-09-03 16:03:59.654195: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2020-09-03 16:03:59.654203: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2020-09-03 16:03:59.654374: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10754 MB memory) -> physical GPU (device: 0, name: Tesla K40c, pci bus id: 0000:04:00.0, compute capability: 3.5)
+2020-09-03 16:03:59,886 ========================================================
+2020-09-03 16:03:59,886 Restoring the trained parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000...
+INFO:tensorflow:Restoring parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000
+2020-09-03 16:03:59,888 Restoring parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000
+2020-09-03 16:03:59,927 ========================================================
+2020-09-03 16:03:59,927 Predicting segmentation for test subject 1...
+2020-09-03 16:05:34,870 ============================================================
+2020-09-03 16:05:34,871 Loading test data from: /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/data/eth_ibt/flownet/hannes/recon_R8_volN6_vn.mat
+2020-09-03 16:05:38,446 Shape of test images: (32, 144, 112, 48, 4)
+2020-09-03 16:05:38,446 Shape of test labels: (32, 144, 112, 48)
+2020-09-03 16:05:38,446 ============================================================
+2020-09-03 16:05:39,158 =======================================================
+2020-09-03 16:05:39,158 Details of the segmentation CNN architecture
+2020-09-03 16:05:39,158 =======================================================
+2020-09-03 16:05:39,158 Shape of input: (8, 144, 112, 48, 4)
+2020-09-03 16:05:39,158 Shape after 1st max pooling layer: (8, 72, 56, 24, 8)
+2020-09-03 16:05:39,158 Shape after 2nd max pooling layer: (8, 36, 28, 12, 16)
+2020-09-03 16:05:39,158 Shape after 3rd max pooling layer: (8, 18, 14, 6, 32)
+2020-09-03 16:05:39,158 Shape after 4th max pooling layer: (8, 9, 7, 3, 64)
+2020-09-03 16:05:39,158 =======================================================
+2020-09-03 16:05:39,158 Before each maxpool, there are 2 conv blocks.
+2020-09-03 16:05:39,158 Each conv block consists of conv3d (k=3), followed by BN, followed by relu.
+2020-09-03 16:05:39,158 =======================================================
+2020-09-03 16:05:39,158 Shape of the bottleneck layer: (8, 9, 7, 3, 128)
+2020-09-03 16:05:39,158 =======================================================
+2020-09-03 16:05:39,159 Shape after 1st upsampling block: (8, 18, 14, 6, 64)
+2020-09-03 16:05:39,159 Shape after 2nd upsampling block: (8, 36, 28, 12, 32)
+2020-09-03 16:05:39,159 Shape after 3rd upsampling block: (8, 72, 56, 24, 16)
+2020-09-03 16:05:39,159 Shape after 4rd upsampling block: (8, 144, 112, 48, 8)
+2020-09-03 16:05:39,159 =======================================================
+2020-09-03 16:05:39,159 Each upsampling block consists of bilinear upsampling, followed by skip connection, followed by 2 conv blocks.
+2020-09-03 16:05:39,159 =======================================================
+2020-09-03 16:05:39,159 Shape of output (before softmax): (8, 144, 112, 48, 2)
+2020-09-03 16:05:39,159 =======================================================
+2020-09-03 16:05:39,251 Adding the op to initialize variables...
+2020-09-03 16:05:39.253665: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2020-09-03 16:05:39.253722: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-09-03 16:05:39.253732: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2020-09-03 16:05:39.253747: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2020-09-03 16:05:39.253929: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10754 MB memory) -> physical GPU (device: 0, name: Tesla K40c, pci bus id: 0000:04:00.0, compute capability: 3.5)
+2020-09-03 16:05:39,486 ========================================================
+2020-09-03 16:05:39,486 Restoring the trained parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000...
+INFO:tensorflow:Restoring parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000
+2020-09-03 16:05:39,487 Restoring parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000
+2020-09-03 16:05:39,526 ========================================================
+2020-09-03 16:05:39,526 Predicting segmentation for test subject 1...
+2020-09-03 16:07:14,152 ============================================================
+2020-09-03 16:07:14,153 Loading test data from: /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/data/eth_ibt/flownet/hannes/recon_R10_volN6_vn.mat
+2020-09-03 16:07:17,775 Shape of test images: (32, 144, 112, 48, 4)
+2020-09-03 16:07:17,776 Shape of test labels: (32, 144, 112, 48)
+2020-09-03 16:07:17,776 ============================================================
+2020-09-03 16:07:18,487 =======================================================
+2020-09-03 16:07:18,488 Details of the segmentation CNN architecture
+2020-09-03 16:07:18,488 =======================================================
+2020-09-03 16:07:18,488 Shape of input: (8, 144, 112, 48, 4)
+2020-09-03 16:07:18,488 Shape after 1st max pooling layer: (8, 72, 56, 24, 8)
+2020-09-03 16:07:18,488 Shape after 2nd max pooling layer: (8, 36, 28, 12, 16)
+2020-09-03 16:07:18,488 Shape after 3rd max pooling layer: (8, 18, 14, 6, 32)
+2020-09-03 16:07:18,488 Shape after 4th max pooling layer: (8, 9, 7, 3, 64)
+2020-09-03 16:07:18,488 =======================================================
+2020-09-03 16:07:18,488 Before each maxpool, there are 2 conv blocks.
+2020-09-03 16:07:18,488 Each conv block consists of conv3d (k=3), followed by BN, followed by relu.
+2020-09-03 16:07:18,488 =======================================================
+2020-09-03 16:07:18,488 Shape of the bottleneck layer: (8, 9, 7, 3, 128)
+2020-09-03 16:07:18,488 =======================================================
+2020-09-03 16:07:18,488 Shape after 1st upsampling block: (8, 18, 14, 6, 64)
+2020-09-03 16:07:18,488 Shape after 2nd upsampling block: (8, 36, 28, 12, 32)
+2020-09-03 16:07:18,488 Shape after 3rd upsampling block: (8, 72, 56, 24, 16)
+2020-09-03 16:07:18,488 Shape after 4rd upsampling block: (8, 144, 112, 48, 8)
+2020-09-03 16:07:18,488 =======================================================
+2020-09-03 16:07:18,488 Each upsampling block consists of bilinear upsampling, followed by skip connection, followed by 2 conv blocks.
+2020-09-03 16:07:18,488 =======================================================
+2020-09-03 16:07:18,488 Shape of output (before softmax): (8, 144, 112, 48, 2)
+2020-09-03 16:07:18,489 =======================================================
+2020-09-03 16:07:18,581 Adding the op to initialize variables...
+2020-09-03 16:07:18.582892: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2020-09-03 16:07:18.582943: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-09-03 16:07:18.582953: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2020-09-03 16:07:18.582961: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2020-09-03 16:07:18.583125: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10754 MB memory) -> physical GPU (device: 0, name: Tesla K40c, pci bus id: 0000:04:00.0, compute capability: 3.5)
+2020-09-03 16:07:18,817 ========================================================
+2020-09-03 16:07:18,817 Restoring the trained parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000...
+INFO:tensorflow:Restoring parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000
+2020-09-03 16:07:18,819 Restoring parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000
+2020-09-03 16:07:18,858 ========================================================
+2020-09-03 16:07:18,858 Predicting segmentation for test subject 1...
+2020-09-03 16:08:54,305 ============================================================
+2020-09-03 16:08:54,306 Loading test data from: /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/data/eth_ibt/flownet/hannes/recon_R6_volN7_vn.mat
+2020-09-03 16:08:57,825 Shape of test images: (32, 144, 112, 48, 4)
+2020-09-03 16:08:57,825 Shape of test labels: (32, 144, 112, 48)
+2020-09-03 16:08:57,825 ============================================================
+2020-09-03 16:08:58,538 =======================================================
+2020-09-03 16:08:58,538 Details of the segmentation CNN architecture
+2020-09-03 16:08:58,538 =======================================================
+2020-09-03 16:08:58,538 Shape of input: (8, 144, 112, 48, 4)
+2020-09-03 16:08:58,538 Shape after 1st max pooling layer: (8, 72, 56, 24, 8)
+2020-09-03 16:08:58,538 Shape after 2nd max pooling layer: (8, 36, 28, 12, 16)
+2020-09-03 16:08:58,538 Shape after 3rd max pooling layer: (8, 18, 14, 6, 32)
+2020-09-03 16:08:58,538 Shape after 4th max pooling layer: (8, 9, 7, 3, 64)
+2020-09-03 16:08:58,538 =======================================================
+2020-09-03 16:08:58,538 Before each maxpool, there are 2 conv blocks.
+2020-09-03 16:08:58,539 Each conv block consists of conv3d (k=3), followed by BN, followed by relu.
+2020-09-03 16:08:58,539 =======================================================
+2020-09-03 16:08:58,539 Shape of the bottleneck layer: (8, 9, 7, 3, 128)
+2020-09-03 16:08:58,539 =======================================================
+2020-09-03 16:08:58,539 Shape after 1st upsampling block: (8, 18, 14, 6, 64)
+2020-09-03 16:08:58,539 Shape after 2nd upsampling block: (8, 36, 28, 12, 32)
+2020-09-03 16:08:58,539 Shape after 3rd upsampling block: (8, 72, 56, 24, 16)
+2020-09-03 16:08:58,539 Shape after 4rd upsampling block: (8, 144, 112, 48, 8)
+2020-09-03 16:08:58,539 =======================================================
+2020-09-03 16:08:58,539 Each upsampling block consists of bilinear upsampling, followed by skip connection, followed by 2 conv blocks.
+2020-09-03 16:08:58,539 =======================================================
+2020-09-03 16:08:58,539 Shape of output (before softmax): (8, 144, 112, 48, 2)
+2020-09-03 16:08:58,539 =======================================================
+2020-09-03 16:08:58,631 Adding the op to initialize variables...
+2020-09-03 16:08:58.633303: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2020-09-03 16:08:58.633360: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-09-03 16:08:58.633370: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2020-09-03 16:08:58.633378: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2020-09-03 16:08:58.633552: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10754 MB memory) -> physical GPU (device: 0, name: Tesla K40c, pci bus id: 0000:04:00.0, compute capability: 3.5)
+2020-09-03 16:08:58,865 ========================================================
+2020-09-03 16:08:58,866 Restoring the trained parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000...
+INFO:tensorflow:Restoring parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000
+2020-09-03 16:08:58,867 Restoring parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000
+2020-09-03 16:08:58,906 ========================================================
+2020-09-03 16:08:58,906 Predicting segmentation for test subject 1...
+2020-09-03 16:10:34,133 ============================================================
+2020-09-03 16:10:34,133 Loading test data from: /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/data/eth_ibt/flownet/hannes/recon_R8_volN7_vn.mat
+2020-09-03 16:10:38,934 Shape of test images: (32, 144, 112, 48, 4)
+2020-09-03 16:10:38,934 Shape of test labels: (32, 144, 112, 48)
+2020-09-03 16:10:38,934 ============================================================
+2020-09-03 16:10:39,646 =======================================================
+2020-09-03 16:10:39,646 Details of the segmentation CNN architecture
+2020-09-03 16:10:39,647 =======================================================
+2020-09-03 16:10:39,647 Shape of input: (8, 144, 112, 48, 4)
+2020-09-03 16:10:39,647 Shape after 1st max pooling layer: (8, 72, 56, 24, 8)
+2020-09-03 16:10:39,647 Shape after 2nd max pooling layer: (8, 36, 28, 12, 16)
+2020-09-03 16:10:39,647 Shape after 3rd max pooling layer: (8, 18, 14, 6, 32)
+2020-09-03 16:10:39,647 Shape after 4th max pooling layer: (8, 9, 7, 3, 64)
+2020-09-03 16:10:39,647 =======================================================
+2020-09-03 16:10:39,647 Before each maxpool, there are 2 conv blocks.
+2020-09-03 16:10:39,647 Each conv block consists of conv3d (k=3), followed by BN, followed by relu.
+2020-09-03 16:10:39,647 =======================================================
+2020-09-03 16:10:39,647 Shape of the bottleneck layer: (8, 9, 7, 3, 128)
+2020-09-03 16:10:39,647 =======================================================
+2020-09-03 16:10:39,647 Shape after 1st upsampling block: (8, 18, 14, 6, 64)
+2020-09-03 16:10:39,647 Shape after 2nd upsampling block: (8, 36, 28, 12, 32)
+2020-09-03 16:10:39,647 Shape after 3rd upsampling block: (8, 72, 56, 24, 16)
+2020-09-03 16:10:39,647 Shape after 4rd upsampling block: (8, 144, 112, 48, 8)
+2020-09-03 16:10:39,647 =======================================================
+2020-09-03 16:10:39,647 Each upsampling block consists of bilinear upsampling, followed by skip connection, followed by 2 conv blocks.
+2020-09-03 16:10:39,647 =======================================================
+2020-09-03 16:10:39,647 Shape of output (before softmax): (8, 144, 112, 48, 2)
+2020-09-03 16:10:39,647 =======================================================
+2020-09-03 16:10:39,740 Adding the op to initialize variables...
+2020-09-03 16:10:39.741973: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2020-09-03 16:10:39.742027: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-09-03 16:10:39.742037: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2020-09-03 16:10:39.742045: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2020-09-03 16:10:39.742200: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10754 MB memory) -> physical GPU (device: 0, name: Tesla K40c, pci bus id: 0000:04:00.0, compute capability: 3.5)
+2020-09-03 16:10:39,972 ========================================================
+2020-09-03 16:10:39,972 Restoring the trained parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000...
+INFO:tensorflow:Restoring parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000
+2020-09-03 16:10:39,974 Restoring parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000
+2020-09-03 16:10:40,012 ========================================================
+2020-09-03 16:10:40,012 Predicting segmentation for test subject 1...
+2020-09-03 16:12:14,940 ============================================================
+2020-09-03 16:12:14,941 Loading test data from: /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/data/eth_ibt/flownet/hannes/recon_R10_volN7_vn.mat
+2020-09-03 16:12:19,912 Shape of test images: (32, 144, 112, 48, 4)
+2020-09-03 16:12:19,912 Shape of test labels: (32, 144, 112, 48)
+2020-09-03 16:12:19,912 ============================================================
+2020-09-03 16:12:20,626 =======================================================
+2020-09-03 16:12:20,626 Details of the segmentation CNN architecture
+2020-09-03 16:12:20,626 =======================================================
+2020-09-03 16:12:20,626 Shape of input: (8, 144, 112, 48, 4)
+2020-09-03 16:12:20,626 Shape after 1st max pooling layer: (8, 72, 56, 24, 8)
+2020-09-03 16:12:20,626 Shape after 2nd max pooling layer: (8, 36, 28, 12, 16)
+2020-09-03 16:12:20,626 Shape after 3rd max pooling layer: (8, 18, 14, 6, 32)
+2020-09-03 16:12:20,626 Shape after 4th max pooling layer: (8, 9, 7, 3, 64)
+2020-09-03 16:12:20,626 =======================================================
+2020-09-03 16:12:20,626 Before each maxpool, there are 2 conv blocks.
+2020-09-03 16:12:20,627 Each conv block consists of conv3d (k=3), followed by BN, followed by relu.
+2020-09-03 16:12:20,627 =======================================================
+2020-09-03 16:12:20,627 Shape of the bottleneck layer: (8, 9, 7, 3, 128)
+2020-09-03 16:12:20,627 =======================================================
+2020-09-03 16:12:20,627 Shape after 1st upsampling block: (8, 18, 14, 6, 64)
+2020-09-03 16:12:20,627 Shape after 2nd upsampling block: (8, 36, 28, 12, 32)
+2020-09-03 16:12:20,627 Shape after 3rd upsampling block: (8, 72, 56, 24, 16)
+2020-09-03 16:12:20,627 Shape after 4rd upsampling block: (8, 144, 112, 48, 8)
+2020-09-03 16:12:20,627 =======================================================
+2020-09-03 16:12:20,627 Each upsampling block consists of bilinear upsampling, followed by skip connection, followed by 2 conv blocks.
+2020-09-03 16:12:20,627 =======================================================
+2020-09-03 16:12:20,627 Shape of output (before softmax): (8, 144, 112, 48, 2)
+2020-09-03 16:12:20,627 =======================================================
+2020-09-03 16:12:20,719 Adding the op to initialize variables...
+2020-09-03 16:12:20.721188: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2020-09-03 16:12:20.721243: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-09-03 16:12:20.721253: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2020-09-03 16:12:20.721261: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2020-09-03 16:12:20.721423: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10754 MB memory) -> physical GPU (device: 0, name: Tesla K40c, pci bus id: 0000:04:00.0, compute capability: 3.5)
+2020-09-03 16:12:20,954 ========================================================
+2020-09-03 16:12:20,954 Restoring the trained parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000...
+INFO:tensorflow:Restoring parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000
+2020-09-03 16:12:20,956 Restoring parameters from /usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1/models/best_dice.ckpt-8000
+2020-09-03 16:12:20,995 ========================================================
+2020-09-03 16:12:20,995 Predicting segmentation for test subject 1...
+dict_keys(['__header__', '__version__', '__globals__', 'imrecon', 'masks'])
+/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1
+dict_keys(['__header__', '__version__', '__globals__', 'imrecon', 'masks'])
+/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1
+dict_keys(['__header__', '__version__', '__globals__', 'imrecon', 'masks'])
+/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1
+dict_keys(['__header__', '__version__', '__globals__', 'masks', 'imrecon'])
+/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1
+dict_keys(['__header__', '__version__', '__globals__', 'imrecon', 'masks'])
+/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1
+dict_keys(['__header__', '__version__', '__globals__', 'masks', 'imrecon'])
+/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1
+dict_keys(['__header__', '__version__', '__globals__', 'masks', 'imrecon'])
+/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1
+dict_keys(['__header__', '__version__', '__globals__', 'masks', 'imrecon'])
+/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1
+dict_keys(['__header__', '__version__', '__globals__', 'masks', 'imrecon'])
+/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1
+dict_keys(['__header__', '__version__', '__globals__', 'imrecon', 'masks'])
+/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1
+dict_keys(['__header__', '__version__', '__globals__', 'masks', 'imrecon'])
+/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1
+dict_keys(['__header__', '__version__', '__globals__', 'imrecon', 'masks'])
+/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1
+dict_keys(['__header__', '__version__', '__globals__', 'masks', 'imrecon'])
+/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1
+dict_keys(['__header__', '__version__', '__globals__', 'masks', 'imrecon'])
+/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1
+dict_keys(['__header__', '__version__', '__globals__', 'masks', 'imrecon'])
+/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1
+dict_keys(['__header__', '__version__', '__globals__', 'imrecon', 'masks'])
+/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1
+dict_keys(['__header__', '__version__', '__globals__', 'imrecon', 'masks'])
+/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1
+dict_keys(['__header__', '__version__', '__globals__', 'masks', 'imrecon'])
+/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1
+dict_keys(['__header__', '__version__', '__globals__', 'masks', 'imrecon'])
+/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1
+dict_keys(['__header__', '__version__', '__globals__', 'imrecon', 'masks'])
+/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1
+dict_keys(['__header__', '__version__', '__globals__', 'imrecon', 'masks'])
+/usr/bmicnas01/data-biwi-01/nkarani/projects/hpc_predict/code/aorta_segmentation/v2.0/logdir/unet3d_da_0.0_r1
+Hostname was: biwirender04
+Reached end of job file.
